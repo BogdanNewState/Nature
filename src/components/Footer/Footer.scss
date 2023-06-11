@@ -1,0 +1,195 @@
+$primary-color: #3ab3a7;
+$primary-hover: #0c988a;
+$secondary-color: #059789;
+$secondary-hover: #253b53;
+$gray-color: #f7f7f7;
+
+.footer {
+	background: $primary-hover;
+
+	.secContainer {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+
+		.content {
+			gap: 1rem;
+			padding: 2.5rem 0;
+
+			.row {
+				color: white;
+				.spanText {
+					font-weight: 800;
+					color: $primary-hover;
+					padding: 1rem 0;
+				}
+
+				.contactDiv {
+					display: grid;
+					gap: 0.5rem;
+				}
+
+				.flex {
+					gap: 0.5rem;
+
+					.icon {
+						font-size: 15px;
+						color: $primary-hover;
+					}
+
+					span {
+						font-size: 14px;
+					}
+				}
+
+				.singleNews {
+					margin-bottom: 1rem;
+
+					.text {
+						font-size: 14px;
+					}
+
+					p {
+						padding-top: 0.4rem;
+					}
+				}
+				.footerLinks ul {
+					li {
+						font-size: 14px;
+						cursor: pointer;
+						padding: 0.5rem 0;
+
+						&:hover {
+							color: $secondary-color;
+						}
+					}
+				}
+			}
+		}
+
+		.bottomDiv {
+			padding: 1rem;
+			flex-direction: column;
+			text-align: center;
+			justify-content: space-around;
+			gap: 1rem;
+			background: $primary-color;
+			color: $secondary-hover;
+			border-radius: 10px;
+			margin-bottom: 1rem;
+
+			.social {
+				gap: 0.5rem;
+
+				.icon {
+					font-size: 18px;
+					cursor: pointer;
+
+					&:hover {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+//media
+
+@media screen and (min-width: 574px) {
+	.footer {
+		.secContainer {
+			.content {
+				grid-template-columns: repeat(3, 1fr);
+				align-items: start;
+				justify-content: center;
+
+				.row {
+					margin: 0 auto;
+
+					.spanText {
+						font-size: 14px;
+					}
+
+					.contactDiv {
+						display: grid;
+						gap: 1rem;
+					}
+
+					.flex {
+						gap: 1rem;
+
+						.icon {
+							font-size: 14px;
+						}
+
+						span {
+							font-size: 14px;
+						}
+					}
+
+					.singleNews {
+						.text {
+							font-size: 14px;
+						}
+
+						p {
+							padding-top: 1rem;
+						}
+					}
+
+					.footerLinks ul {
+						li {
+							font-size: 14px;
+							cursor: pointer;
+							padding: 0.5rem 0;
+						}
+					}
+				}
+			}
+
+			.bottomDiv {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.footer {
+		.secContainer {
+			.content {
+				.row {
+					margin: 0 auto;
+
+					.spanText {
+						font-size: 14px;
+					}
+
+					.flex {
+						.icon {
+							font-size: 18px;
+						}
+
+						span {
+							font-size: 16px;
+						}
+					}
+
+					.singleNews {
+						.text {
+							font-size: 16px;
+						}
+					}
+
+					.footerLinks ul {
+						li {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
